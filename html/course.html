@@ -1,0 +1,28 @@
+<html>
+
+<body>
+    <h2>Course Selection</h2>
+    <form action="course.jsp" method="post">
+        <label for="course">Course</label> <br />
+        <select name="course" id="course">
+            <option value="j">Java</option>
+            <option value="p">Python</option>
+            <option value="d">MS.NET</option>
+            <option value="f">Front-end Developer</option>
+        </select>
+        <p></p>
+        Mode <br />
+        <input type="radio" name="mode" id="classroom" value="c" checked />Classroom
+        <input type="radio" name="mode" id="online" value="o" />Online
+
+        <p></p>
+        Options <br />
+        <input type="checkbox" name="cert" value="c" />Certificate
+        <input type="checkbox" name="cm" value="m" />Printed Course Material
+        <p></p>
+        <input type="submit" value="Submit" />
+    </form>
+     
+</body>
+
+</html>
