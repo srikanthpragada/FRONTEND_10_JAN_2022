@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-size: 14pt;
+            font-family: calibri;
+        }
+
+        .header {
+            background-color: maroon;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 3em;
+        }
+
+        .navbar {
+            background-color: black;
+            padding: 10px 15px;
+
+        }
+
+
+        .navbar a {
+
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        /* Links - change color on hover */
+        .navbar a:hover {
+
+            color: lightgreen;
+        }
+
+        /* Create three equal columns that float next to each other */
+        .column {
+            float: left;
+            width: 33%;
+            background-color: lightblue;
+            margin: 2px;
+            text-align: center;
+        }
+
+        .row:after {
+             clear: both;
+        }
+
+        .footer {
+            background-color: lightgray;
+            color: red;
+            text-align: center;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">Srikanth Technologies</div>
+    <div class="navbar">
+        <a href="blogs.aspx">Blogs</a>
+        <a href="courses.aspx">Courses</a>
+        <a href="aboutus.aspx">About</a>
+    </div>
+
+    <div class="row">
+
+        <div class="column">
+            <h1>First Column</h1>
+        </div>
+
+        <div class="column">
+            <h1>Second Column </h1>
+        </div>
+        <div class="column">
+            <h1>Third Column </h1>
+        </div>
+    </div>
+
+    <div class="footer">
+        Copyright &copy; Srikanth Technologies. All rights reserved.
+    </div>
+
+</body>
+
+</html>

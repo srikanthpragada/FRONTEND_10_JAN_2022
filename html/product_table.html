@@ -1,0 +1,29 @@
+<html>
+
+<body>
+   <h2>Product Form</h2>
+   <form action="product.jsp">
+      <table cellpadding="5px">
+         <tr>
+            <td>
+               <label for="prodname">Product Name</label>
+            </td>
+            <td>
+               <input type="text" id="prodname" name="prodname" required />*
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <label for="prodprice">Selling Price</label>
+            </td>
+            <td>
+               <input id="prodprice" type="number" min="100" autofocus max="10000" name="prodprice" />
+            </td>
+         </tr>
+      </table>
+      <p></p>
+      <input type="submit" />
+   </form>
+</body>
+
+</html>

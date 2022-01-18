@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* class */
+        .highlight {
+            font-weight: bold;
+        }
+        /* Just H1 */
+        h1 {
+            color:rgb(185, 55, 55);
+        }
+        /* Id second */
+        #second {
+            color:green;
+        }
+
+        /* Both H1 and H2 */
+        h1, h2 {
+            font-family:arial;
+        }
+
+        /* H3 nested in DIV */
+
+        div h3 {
+            font-style:italic;
+        }
+
+        /* A DIV with banner class */
+        div.banner {
+            font-size:3em;
+        }
+
+        a[target] {
+            color:red;
+        }
+        a {
+            text-decoration: None;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>First Heading</h1>
+    <h1 id="second">Second Heading</h1>
+    <h2>Third Heading</h2>
+    <div>
+        <h3>Fourth Heading</h3>
+    </div>
+    <h3>Outside DIV</h3>
+
+    <div class="banner">This is banner </div>
+
+    <a class="highlight" href="google.com">Google</a>
+    <br>
+    <a class="highlight" href="khanacademy.com" target="_blank">Khan Academy</a>
+</body>
+
+</html>
