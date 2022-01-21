@@ -1,0 +1,35 @@
+<html>
+<script>
+
+  function process() {
+    let val = document.getElementById("num").value 
+    let msg = document.getElementById("msg")
+
+    try {
+      let num = Number(val)
+     
+      if (num == 0)
+        throw Error("Zero is not a valid number!")
+
+      if (num % 2 != 0)
+        throw Error("Not an even number!")
+
+      let result = 100 / num;
+      msg.innerHTML = result
+    }
+    catch (error) {
+      msg.innerHTML = error;
+    }
+  }
+
+</script>
+
+<body>
+  <h2>Error Handling</h2>
+  Even Number : <input type="number" id="num" />
+  <button onclick="process()">Process</button>
+  <p></p>
+  <div id="msg"></div>
+</body>
+
+</html>

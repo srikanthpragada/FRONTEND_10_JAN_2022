@@ -1,0 +1,18 @@
+<html>
+<script>
+    function getTime() {
+        fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata")
+            .then(showResult);
+    }
+
+    function showResult(response) {
+        result = response.json() // returns promise 
+        result.then(data => console.log(data.datetime))
+    }
+</script>
+
+<body>
+    <button onclick="getTime()">Get Time</button>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<html>
+
+<body>
+    <h2>Regular Expression Demo</h2>
+    <div id="output"></div>
+</body>
+
+
+<script>
+    var day = 4
+    var a = 100 
+    var msg;
+    switch (day) {
+        case 1: msg = "Beginning of week"
+            break;
+        case 2:
+        case 3:
+        case 4: msg = "Mid of the week"
+            break;
+        case 5: msg = "Weekend is coming"
+            break;
+        default: msg = "Weekend";
+    }
+    document.getElementById("output").innerText = msg
+</script>
+
+
+</html>

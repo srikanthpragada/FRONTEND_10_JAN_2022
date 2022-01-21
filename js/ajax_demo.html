@@ -1,0 +1,22 @@
+<html>
+<script>
+    const xhttp = new XMLHttpRequest();
+    function getTime() {
+        xhttp.onreadystatechange = showResult;
+        xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Asia/Kolkata");
+        xhttp.send();
+    }
+    function showResult() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            result = JSON.parse(this.responseText)
+            document.getElementById("result").innerHTML = result.datetime;
+        }
+    }
+</script>
+
+<body>
+    <h1 id="result"></h1>
+    <button onclick="getTime()">Get Time</button>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<html>
+<script>
+    function addCourse() {
+        name = document.getElementById("name").value;
+        courses = document.getElementById("courses")
+        option = document.createElement("option")
+        option.text = name;
+        courses.add(option)
+    }
+    function display() {
+        courses = document.getElementById("courses")
+        idx = courses.selectedIndex
+        alert(courses.options[idx].text)
+    }
+</script>
+
+<body>
+    Courses <br />
+    <select id="courses" rows="5" multiple="multiple" style="width:100px">
+        <option>JavaScript</option>
+        <option>MS.NET</option>
+        <option>Python</option>
+    </select>
+    <p></p>
+    <input type="text" id="name" />
+    <p></p>
+    <button onclick="addCourse()">Add Course</button>
+    <button onclick="display()">Display Selected</button>
+</body>
+
+</html>
