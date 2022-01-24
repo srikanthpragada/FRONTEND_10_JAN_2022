@@ -1,0 +1,35 @@
+<html>
+
+<body>
+    <h1>Person Classification</h1>
+    Age : <input type="number" id="age" 
+            min="0" max="100" />
+    <p></p>
+    <button onclick="show()">Show Category</button>
+    <p></p>
+    <h1 id="message"></h1>
+</body>
+<script>
+    "use strict";
+    function show() {
+        var age, message;
+        var txtAge = document.getElementById("age")
+        var msg = document.getElementById("message")
+        age = parseInt(txtAge.value)
+        if (age < 0 || age > 100)
+        {
+            alert("Invalid Age!")
+            return;  // stop function
+        } 
+        if (age < 30)
+            message = "Young";
+        else if (age < 50)
+            message = "Middle-aged";
+        else
+            message = "Old";
+
+        msg.innerHTML = message;
+    }
+</script>
+
+</html>
