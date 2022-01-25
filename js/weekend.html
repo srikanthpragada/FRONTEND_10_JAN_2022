@@ -1,0 +1,29 @@
+<html>
+    
+
+<body>
+    <h2>Type of Day</h2>
+    <h1 id="output"></h1>
+</body>
+
+<script>
+    var cd = new Date();
+    var day = cd.getDay();
+    var msg;
+
+    switch (day) {
+        case 1: msg = "Beginning of week"
+            break;
+        case 2:
+        case 3:
+        case 4: msg = "Mid of the week"
+            break;
+        case 5: msg = "Weekend is coming"
+            break;
+        default: msg = "Weekend";
+    }
+    document.getElementById("output").innerText = msg
+</script>
+
+
+</html>

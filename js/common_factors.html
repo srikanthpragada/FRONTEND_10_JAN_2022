@@ -1,0 +1,39 @@
+<html>
+<style>
+    #output {
+        height: 300px;
+        overflow: auto;
+        font-size: 1.5em;
+        background-color: lightgray;
+    }
+</style>
+
+<body>
+    <h2>Common Factors</h2>
+    <input type="number" id="num1" placeholder="First Number" />
+    <input type="number" id="num2" placeholder="Second Number" />
+    <button onclick="commonFactors()">Common Factors</button>
+    <p></p>
+    <div id="output">
+
+    </div>
+</body>
+
+<script>
+    function commonFactors() {
+        var n1 = parseInt(document.getElementById("num1").value);
+        var n2 = parseInt(document.getElementById("num2").value);
+
+        var smallest = n1 < n2 ? n1 : n2;
+        var factors = "";
+        for (let i = 2; i <= smallest / 2; i++) {
+            if (n1 % i == 0 && n2 % i == 0)
+                factors += i + "<br>";
+
+        }
+        document.getElementById("output").innerHTML = factors;
+    }
+</script>
+
+
+</html>
