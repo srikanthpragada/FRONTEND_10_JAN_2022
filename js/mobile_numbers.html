@@ -16,6 +16,12 @@
             return true; 
         }
        
+  
+        function isValidMobileNumber(s)
+        {
+            return  /^\d{10}$/.test(s);
+        }
+
         function showNumbers() {
           var data = document.getElementById("data").value;
           // Replace all occurrences of \n with , and then split with , 
@@ -24,7 +30,7 @@
           var mobiles = []
           for(let n of numbers)
           {
-              if (isValidMobile(n))
+              if (isValidMobileNumber(n))
                   mobiles.push(n)
           }
 

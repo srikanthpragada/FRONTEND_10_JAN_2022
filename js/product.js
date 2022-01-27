@@ -1,9 +1,12 @@
 class Product {
-    constructor(name, price) {
+    constructor(name, price = 0) {
         this.name = name;
+        // if(!price)
+        //   price = 0;
+
         this.price = price;
     }
-
+    // Methods 
     print() {
         console.log(this.name)
         console.log(this.price)
@@ -16,4 +19,7 @@ class Product {
 
 p = new Product("Dell XPS 9500", 2000000);
 p.print()
-console.log(p.sellingPrice())
+console.log(`Selling price = ${p.sellingPrice()}`)
+
+p2 = new Product("Mac Pro")
+p2.print() 
