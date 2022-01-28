@@ -5,12 +5,14 @@
 </body>
 <script>
     document.getElementById("first").addEventListener("mouseover", show);
+
     function change(ele) {
+        console.log(ele)
         ele.innerHTML = "You clicked on this!";
     }
     // evt is of type MouseEvent
     function show(ent) {
-        // console.log(ent);
+        console.log(ent);
         ent.target.innerHTML = "Moving mouse!!!"
     }
 </script>

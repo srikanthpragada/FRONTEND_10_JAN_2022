@@ -14,9 +14,9 @@ const [f, ...s] = marks;  // spread operator
 console.log(f)
 console.log(s)
 
-// console.log(product.name)
+console.log(product)
 
-// const [pname, price] = product;
+const {name, price} = product;
 
-// console.log(pname + " - " + price)
+console.log(name + " - " + price)
 

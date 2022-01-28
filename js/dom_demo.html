@@ -1,0 +1,19 @@
+<html>
+
+<script>
+   function clearAll()
+   {
+      var tags =  document.querySelectorAll("input.t")
+      console.log(tags)
+      tags.forEach( t => t.value = "")
+   }
+
+</script>
+<h2>DOM Demo</h2>
+<input type="text" class="t" id="t1"/>
+<input type="text" id="t2"/>
+<input type="text" class="t" id="t3"/>
+<input type="text" id="t4"/>
+<p></p>
+<button onclick="clearAll()">Clear All</button>
+</html>
