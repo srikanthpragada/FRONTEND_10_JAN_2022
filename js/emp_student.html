@@ -1,0 +1,48 @@
+<html>
+<script>
+    function toggleName() {
+        var cb = document.getElementById("cb");
+        var tname = document.getElementById("tname")
+        if (cb.checked)
+            tname.style.visibility = "visible"
+        else
+            tname.style.visibility = "hidden"
+    }
+
+    function showStudent() {
+        var stud = document.getElementById("student")
+        var emp = document.getElementById("emp")
+        stud.style.display = "block";
+        emp.style.display = "none";
+    }
+
+    function showEmp() {
+        var stud = document.getElementById("student")
+        var emp = document.getElementById("emp")
+        stud.style.display = "none";
+        emp.style.display = "block";
+    }
+</script>
+
+<body>
+    <input type="checkbox" id="cb" checked onclick="toggleName()">Check Box
+    <p></p>
+    <input type="text" id="tname">
+    <p></p>
+    <input type="radio" name="ptype" value="s" id="rb_student" checked onclick="showStudent()"> Student
+    <input type="radio" name="ptype" value="s" id="rb_emp" onclick="showEmp()">Employee
+    <p></p>
+    <div style="display:flex">
+
+        <div id="student">
+            Course : <input type="text">
+        </div>
+
+        <div id="emp" style="display: none;">
+            Job : <input type="text">
+        </div>
+
+    </div>
+</body>
+
+</html>

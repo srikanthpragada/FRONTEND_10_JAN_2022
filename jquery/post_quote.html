@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
+</head>
+<script>
+    $(function () {
+        $("button").click(postQuote)
+    }
+    );
+    function postQuote() {
+        data = { "quote": $("#quote").val() }
+        let promise = $.post("https://61e935037bc0550017bc6128.mockapi.io/quotes", data)
+
+        promise
+            .then(
+                data => alert("Successfully Added!"),
+                error =>  alert("Sorry! Could not add quote!")
+            );
+    }
+
+</script
+<body>
+    <h2>Mock API</h2>
+    Quote : <input type="text" id="quote"> <br>
+    <button>Add Quote</button>
+     
+</body>
+</html>

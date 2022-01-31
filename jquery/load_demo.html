@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
+</head>
+<script>
+    
+    $(function () {
+        $("button").click(getQuote)
+    }
+    );
+
+    function getQuote() {
+         $("#message").load("https://61e935037bc0550017bc6128.mockapi.io/quotes")
+    }
+</script
+<body>
+    <h2>Load Demo</h2>
+    <button>Get Quote</button>
+    <pre id="message"></pre>
+</body>
+</html>

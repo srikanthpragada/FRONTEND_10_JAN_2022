@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
+</head>
+<script>
+    $(function () {
+        $("button").click(getDate)
+    }
+    );
+    function getDate() {
+        $.get("http://worldtimeapi.org/api/timezone/Asia/Kolkata", showDateTime)
+    }
+    function showDateTime(response) {
+        $("#message").text(response.datetime)
+    }
+</script
+<body>
+    <h2>AJAX Get Demo</h2>
+    <button>Get Date Time</button>
+    <h2 id="message"></h2>
+</body>
+</html>

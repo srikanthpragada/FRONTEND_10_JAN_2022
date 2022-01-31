@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
+</head>
+<script>
+    $(function () {
+        $("button").click(deleteQuote)
+    }
+    );
+    function deleteQuote() {
+        id = $("#quoteId").val() 
+        $.ajax({
+            type : 'delete',
+            url: "https://61e935037bc0550017bc6128.mockapi.io/quotes/" + id, 
+            success: function (result) {
+                  alert("Deleted Quote Successfully!")
+            },
+            error: function(jqxhr, status, error) {
+                  alert("Error : " + error )
+            }
+        });
+    }
+</script
+<body>
+    <h2>Delete Quote</h2>
+    Quote Id : <input type="text" id="quoteId"> <br>
+    <button>Delete Quote</button>
+</body>
+</html>

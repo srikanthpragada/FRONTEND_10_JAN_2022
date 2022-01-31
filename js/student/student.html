@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Student</title>
+</head>
+<body>
+    <form>
+        <label for="sname">Name:</label>
+        <input type="text" id="sname" autocomplete="off">
+        <p></p>
+        <label for="course">Course:</label>
+        <input list="Courses" id="course">
+        <datalist id="Courses">
+            <option value="python" id="python"></option>
+            <option value="datascience" id="datascience"></option>
+        </datalist>
+        <p></p>
+        Fee Paid :<input type="number" id="feespaid">
+        <p></p>
+        <button type="button" onclick="setDetails()">Set Details</button>
+        <p></p>
+        <button type="button" onclick="due()">Get Due</button>
+        <h2 id="dueamt"></h2>
+    </form>
+</body>
+
+<script src="student.js"></script>
+
+</html>
