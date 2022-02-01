@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <style>
+        .banner {
+            font-size: 50px;
+            color: red;
+        }
+
+        .bright {
+            background-color: gray;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
+</head>
+<script>
+    function setTarget() {
+        var link = $("#link")
+        link.attr("href", $("#target").val())
+    }
+</script>
+
+<body>
+    Target : <input type="text" id="target" />
+    <p></p>
+    <a id="link" href="http://google.com">Details</a>
+    <p></p>
+    <button onclick="setTarget()">Set Target</button>
+    
+</body>
+
+</html>

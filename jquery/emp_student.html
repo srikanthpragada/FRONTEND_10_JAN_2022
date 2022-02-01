@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
+    <script>
+        function toggleName() {
+            var cb = $("#cb")[0].checked;
+            if (cb) {
+                $("#tname").css("visibility", "visible");
+            }
+            else
+                $("#tname").css("visibility", "hidden");
+        }
+
+        function show() {
+            var rb = $("input[name='ptype']:checked")[0]
+
+            var stud = $("#student")
+            var emp = $("#emp")
+
+            stud.css("display", "none")
+            emp.css("display", "none")
+
+            if (rb.value == 's')  // value of selected radio button 
+                stud.css("display", "block")
+            else
+                emp.css("display", "block")
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Toggle Name</h2>
+    <input type="checkbox" id="cb" checked onclick="toggleName()">Check Box
+    <p></p>
+    <input type="text" id="tname">
+    <p></p>
+    <input type="radio" name="ptype" value="s" id="rb_student" checked onclick="show()"> Student
+    <input type="radio" name="ptype" value="e" id="rb_emp" onclick="show()">Employee
+    <p></p>
+
+    <div id="student">
+        Course : <input type="text">
+    </div>
+
+    <div id="emp" style="display: none;">
+        Job : <input type="text">
+    </div>
+
+</body>
+
+</html>

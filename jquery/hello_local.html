@@ -5,7 +5,15 @@
 </head>
 <script>
     function sayHello() {
-        $("h1").html("Hello!!!!")
+        // console.log($("#message"))
+        // console.log($("h1"))
+        // $("h1").html("Hello!!!!")
+        // $("h1").css("color","red")
+
+        // Method Chaining 
+        $("h1").html("Hello!!!!").css({"font-size": "50px", "color" : "red"})
+        // Get css property value
+        console.log($("h1").css("color"))
     }
 </script
 <body>

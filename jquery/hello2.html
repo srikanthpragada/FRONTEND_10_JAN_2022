@@ -4,16 +4,19 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
 </head>
 <script>
-    let prevColor = "";
-    $(function () {
-        $("button").click(sayHello)
-    }
+     // Document ready event 
+     $(function () {
+        console.log("Document ready");
+        $("button").click(sayHello) // register event handler 
+      }
     );
+
+    console.log("Beginning");
 
     function sayHello() {
         $("#message").html("Hello!!!!")
     }
-</script
+</script>
 <body>
     <h2>Unobtrusive Hello</h2>
     <button>Say Hello!</button>

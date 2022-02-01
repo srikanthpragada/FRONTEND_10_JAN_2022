@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
+</head>
+<script>
+    function addName() {
+        var names = $("#names")
+        var name = $("#name")
+        names.append("<option>" + name.val() + "</option>")
+    }
+
+    function removeName() {
+        var name = $("#name")
+        var nameOption = $("#names option[value='" + name.val() + "']")
+        nameOption.remove()
+    }
+    
+</script
+<body>
+     <h1>Names</h1>
+     Name : <input type="text" id="name" />
+     <button onclick="addName()">Add</button>
+     <button onclick="removeName()">Remove</button>
+     <p></p>
+     Names : <br/>
+     <select id="names" rows="5">
+        <option value="a">a</option>
+        <option value="b">b</option>
+        <option value="c">c</option>
+
+     </select>
+</body>
+</html>
