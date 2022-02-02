@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
+    <style>
+        .banner {
+            background-color: blue;
+            color: white;
+            font-size: 3em;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<script>
+    function fadeIn() {
+        $("#banner").fadeIn(5000);
+    }
+
+    function fadeOut() {
+        $("#banner").fadeOut(1000);
+    }
+
+    function slideToggle() {
+        $("#banner").slideToggle(1000, () => alert("Done!"));
+    }
+
+    function hideBanner() {
+        $("#banner").hide();
+    }
+
+    function animateBanner() {
+         $("#banner").animate(
+            {
+               opacity : 0.50,
+               fontSize : '4em'         
+            },
+            2000,
+            () =>  console.log("Done")
+        );
+    }
+
+</script
+<body>
+    <div id="banner" class="banner">
+        Srikanth Technologies
+    </div>
+    <p></p>
+    <button onclick="fadeIn()">Fade In</button>
+    <button onclick="fadeOut()">Fade Out</button>
+
+    <button onclick="slideToggle()">Slide Toggle</button>
+
+    <button onclick="animateBanner()">Animate</button>
+    <button onclick="hideBanner()">Hide</button>
+
+
+     
+</body>
+</html>

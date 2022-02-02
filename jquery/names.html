@@ -6,14 +6,15 @@
 <script>
     function addName() {
         var names = $("#names")
-        var name = $("#name")
-        names.append("<option>" + name.val() + "</option>")
+        var name = $("#name").val() 
+        names.append(`<option value='${name}'>${name}</option>`)
     }
 
     function removeName() {
-        var name = $("#name")
-        var nameOption = $("#names option[value='" + name.val() + "']")
+        var name = $("#name").val() 
+        var nameOption = $("#names option[value='" + name + "']")
         nameOption.remove()
+        alert("Removed!")
     }
     
 </script
@@ -24,11 +25,10 @@
      <button onclick="removeName()">Remove</button>
      <p></p>
      Names : <br/>
-     <select id="names" rows="5">
-        <option value="a">a</option>
-        <option value="b">b</option>
-        <option value="c">c</option>
-
+     <select id="names">
+        <option value="Anders">Anders</option>
+        <option value="Resig">Resig</option>
+        <option value="Gosling">Gosling</option>
      </select>
 </body>
 </html>
