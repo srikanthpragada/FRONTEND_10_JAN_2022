@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
+    <script>
+        const URL = "http://localhost:3000/books"
+
+        $(function () {
+            getBooks();
+        });
+
+        function getBooks() {
+
+            $.get(URL, null,
+                (books) => {
+                    console.log(books)
+                    var rows = "";
+                    $.each(books, (idx, book) => {
+                        console.log(book)
+                        rows += `<tr><td>${book.title}</td>
+                                 <td>${book.price}</td>
+                                 <td><button onclick="deleteBook(${book.id})">Delete</button>
+                                 </tr>`;
+                    })
+                    // clear existing rows
+                    $("#books").empty();
+                    $("#books").append(rows)
+                }
+            );
+        }
+
+        function deleteBook(id) {
+
+            var url = URL + "/" + id;
+            $.ajax({
+                "url": url,
+                "type": "delete",
+                "success": () => {
+                    alert("Deleted!");
+                    getBooks();
+                },
+                "error": (msg) => alert("Error : " + msg)
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Books</h2>
+    <table id="booksTable" border="1" cellpadding="5px">
+      
+            <tr>
+                <th>Title</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+            <tbody id="books">
+            </tbody>
+    </table>
+</body>
+
+</html>

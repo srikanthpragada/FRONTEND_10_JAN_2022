@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
+    <script>
+        const URL = "http://localhost:3000/books"
+        function addBook() {
+           var data = {
+                "title": $("#txtTitle").val(),
+                "price": $("#txtPrice").val(),
+
+            };
+            $.ajax({
+                "url": URL,
+                "data": data,
+                "type": "post",
+                "success": () => alert("Added!!"),
+                "error": (msg) => alert("Sorry! Error --> " + msg)
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Add Book</h2>
+    Title :
+    <br />
+    <input type="text" id="txtTitle" />
+    <p />
+    Price
+    <br />
+    <input type="text" id="txtPrice" />
+    <p />
+    <input type="button" value="Add Book" onclick="addBook()" />
+
+</body>
+
+</html>
