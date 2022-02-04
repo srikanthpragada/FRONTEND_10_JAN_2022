@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
+    <style>
+        #details  {
+            font-size:2em;
+            margin-right: 10px;
+            background-color: lightgray;
+        }
+    </style>    
+</head>
+<script>
+    function getDetails() {
+        $("#output").css("visibility", "hidden");
+        const URL = "https://api.github.com/users/"
+        $.ajax
+            (
+                {
+                    url: URL + $("#uname").val(),
+                    type: 'get',
+                    success: showDetails,
+                    error: (result) => {
+                        console.log(result)
+                        alert("Sorry! Could not get details!")
+                    }
+
+                }
+            );
+    }
+
+    function showDetails(details) {
+
+        console.log(details)
+        var content = "";
+
+        content += `<div>${details.name}</div>` + `<div>${details.company}</div>`
+        $("#details").html(content)
+
+        $("#image").attr("src", details.avatar_url)
+
+        $("#output").css("visibility", "visible");
+    }
+
+</script
+<body>
+    Username : <input type="text" value="srikanthpragada" id="uname" />
+    <p></p>
+    <button onclick="getDetails()">Get Details</button>
+    <p></p>
+    <div id="output" style="display:flex; visibility:hidden">
+        <div id="details">
+
+        </div>    
+        <div>
+             <img id="image" />
+        </div>
+            
+</body>
+</html>

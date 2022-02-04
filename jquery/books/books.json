@@ -19,6 +19,16 @@
       "title": "World is flat",
       "price": "450",
       "id": 5
+    },
+    {
+      "title": "Gift of Fear",
+      "price": "874",
+      "id": 6
+    },
+    {
+      "title": "You can win",
+      "price": "450",
+      "id": 7
     }
   ]
 }

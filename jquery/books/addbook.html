@@ -6,14 +6,14 @@
         const URL = "http://localhost:3000/books"
         function addBook() {
            var data = {
-                "title": $("#txtTitle").val(),
-                "price": $("#txtPrice").val(),
+                title: $("#txtTitle").val(),
+                price: $("#txtPrice").val(),
 
             };
             $.ajax({
                 "url": URL,
                 "data": data,
-                "type": "post",
+                "type": "post",   // insert 
                 "success": () => alert("Added!!"),
                 "error": (msg) => alert("Sorry! Error --> " + msg)
             });
@@ -32,6 +32,9 @@
     <input type="text" id="txtPrice" />
     <p />
     <input type="button" value="Add Book" onclick="addBook()" />
+
+    <P></P>
+    <a href="listbooks.html">List Books</a>
 
 </body>
 
