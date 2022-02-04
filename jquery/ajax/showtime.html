@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
+</head>
+<script>
+    function getTime() {
+        const URL = "http://worldclockapi.com/api/json/utc/now"
+        $.get(URL,
+            function (result) {
+                console.log(result)
+                $("#message").text(result.currentDateTime)
+            }
+        );
+    }
+
+    function getESTTime() {
+        const URL = "http://worldclockapi.com/api/json/est"
+        $.ajax
+            (
+                {
+                    url: URL,
+                    type: 'get',
+                    success: (result) => { $("h1").text(result.currentDateTime) },
+                    error: (result) => {
+                        console.log(result)
+                        alert("Sorry! Error : " + result)
+                    }
+
+                }
+            );
+    }
+
+
+</script
+<body>
+    <button onclick="getTime()">Get Time</button>
+    <button onclick="getESTTime()">Get EST Time</button>
+    <h1 id="message"></h1>
+</body>
+</html>
