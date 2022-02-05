@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Progress Bar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="progress" >
+            <div  id="bar"
+            class="progress-bar bg-primary  progress-bar-striped progress-bar-animated" 
+            role="progressbar" 
+            aria-valuemin="1" aria-valuenow = "50" aria-valuemax="100"></div>
+        </div>
+    </div>
+
+    <button onclick="start()">Start</button>
+</body>
+
+<script>
+    var v = 10;
+    var intervalId;
+
+    function start() {
+         intervalId =  setInterval(change,100);
+       
+
+    }
+
+    function change() {
+         v += 10;
+         if (v <= 100)
+            $("#bar").css("width", v + "%")
+        else
+            clearInterval(intervalId);
+          
+
+    }
+
+
+</script>
+
+
+</html>
