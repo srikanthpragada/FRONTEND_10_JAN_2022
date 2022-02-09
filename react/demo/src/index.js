@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './index.css';
-// import Hello from "./basics/Hello"
-
-import Greet from "./basics/Greet"
+import Product from './basics/Product'
+ 
 
 ReactDOM.render(
-  <Greet />,
+  <React.StrictMode>
+    <Product name="MacBook Pro" price="125000" />
+    <Product name="MacBook Air" price="100000" />
+  </React.StrictMode>,
+  
   document.getElementById('root')
 );
  

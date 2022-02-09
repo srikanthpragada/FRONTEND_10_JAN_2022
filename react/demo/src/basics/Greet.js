@@ -5,7 +5,7 @@ class Greet extends React.Component {
 
     render() {
         return (
-            <h1>
+            <h1 style={{color: 'blue'}}>
                  {this.message}
             </h1>
         );
