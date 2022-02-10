@@ -1,23 +1,14 @@
 
+import Course from './Course'
+
+
 export default function Courses() {
 
     const courses = [
-        { title: "Python", duration: 36 },
-        { title: "Frontend Developer", duration: 30 },
-        { title: "Java EE", duration: 40 }
+        { title: "Python", duration: 36, fee: 5000 },
+        { title: "Frontend Developer", duration: 30, fee: 4000 },
+        { title: "Java EE", duration: 40, fee: 6000 }
     ]
-
-    function generateCourseRow(course, idx) {
-        return (
-            <tr key={idx}>
-                <td> {course.title}</td>
-                <td style={{ textAlign: 'center' }}>
-                    {course.duration}
-                </td>
-            </tr>
-
-        )  // return 
-    }
 
     return (
         <>
@@ -32,7 +23,13 @@ export default function Courses() {
                 </thead>
                 <tbody>
                     {
-                        courses.map(generateCourseRow)
+                        courses.map(
+                            (course, index) =>
+                            {
+                                return <Course course={course} index={index} />
+                            }
+                          
+                        )
                     }
                 </tbody>
 
