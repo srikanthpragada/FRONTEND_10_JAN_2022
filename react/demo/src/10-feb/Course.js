@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
  
 
 export default function Course(props) {
-
     function showFee() {
         alert("Fee = " + props.course.fee)
     }
@@ -24,7 +23,10 @@ export default function Course(props) {
 
 // Type checking with PropTypes 
 Course.propTypes = {
-    title: PropTypes.string,
-    duration: PropTypes.number,
-    fee : PropTypes.number
+    course : PropTypes.shape({
+        title :  PropTypes.string,
+        duration: PropTypes.number,
+        fee : PropTypes.number,
+    })
+ 
 };

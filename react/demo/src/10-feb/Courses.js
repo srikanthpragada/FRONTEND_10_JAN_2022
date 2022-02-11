@@ -1,5 +1,6 @@
 
 import Course from './Course'
+import OnlineCourse from './OnlineCourse'
 
 
 export default function Courses() {
@@ -7,7 +8,7 @@ export default function Courses() {
     const courses = [
         { title: "Python", duration: 36, fee: 5000 },
         { title: "Frontend Developer", duration: 30, fee: 4000 },
-        { title: "Java EE", duration: 40, fee: 6000 }
+        { title: "Java EE", duration: 40, fee: 6000}
     ]
 
     return (
@@ -26,7 +27,7 @@ export default function Courses() {
                         courses.map(
                             (course, index) =>
                             {
-                                return <Course course={course} index={index} />
+                                return <OnlineCourse course={course} index={index} key={index} />
                             }
                           
                         )

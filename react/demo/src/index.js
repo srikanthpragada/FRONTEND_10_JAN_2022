@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './index.css';
-import Discount from './basics/Discount'
- 
-function Welcome() {
-    return <h1>Welcome!!!</h1>
-}
+//import Discount from './basics/Discount'
+//import Courses from './10-feb/Courses'
+
+import Cart from './pc/Cart'
+
 
 ReactDOM.render(
   <React.StrictMode>
-     <Discount  />
+      <Cart />
   </React.StrictMode>,
   
   document.getElementById('root')
