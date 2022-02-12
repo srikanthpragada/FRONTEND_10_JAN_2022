@@ -6,11 +6,12 @@ import './index.css';
 //import Courses from './10-feb/Courses'
 
 import Cart from './pc/Cart'
+import Inches from './basics/Inches'
 
 
 ReactDOM.render(
   <React.StrictMode>
-      <Cart />
+      <Inches />
   </React.StrictMode>,
   
   document.getElementById('root')

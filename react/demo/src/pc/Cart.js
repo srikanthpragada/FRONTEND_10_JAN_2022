@@ -1,6 +1,35 @@
 
 import React, { useState } from 'react'
 
+
+function AddItem() {
+    return (
+        <form>
+            <h2>Add Item</h2>
+        </form>
+    )
+}
+
+function CartItem(props) {
+    function deleteCartItem(index) {
+        if (window.confirm("Do you want to delete item?")) {
+            props.deleteItem(index)
+        }
+    }
+
+    return (
+        <tr>
+            <td>{props.item.title}</td>
+            <td>{props.item.qty}</td>
+            <td>{props.item.price}</td>
+            <td>{props.item.qty * props.item.price}</td>
+            <td><button className="btn-danger"
+                onClick={() => deleteCartItem(props.index)}>Delete</button></td>
+        </tr>
+
+    )
+}
+
 export default function Cart() {
     const initialCart = {
         items: [
@@ -12,24 +41,38 @@ export default function Cart() {
 
     const [cart, setCart] = useState(initialCart)
 
+    function deleteItem(index) {
+        // Select all items except item to be deleted using filter() 
+        let newItems = cart.items.filter((item, idx) => idx !== index)
+        console.log(newItems)
+        setCart({ items: newItems })
+    }
+
     return (
         <>
-            <h1>Cart</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Qty</th>
-                        <th>Price</th>
-                        <th>Amount</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                </tbody>
-
-            </table>
+            <div className="container">
+                <h1>Cart</h1>
+   
+                <table className="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Qty</th>
+                            <th>Price</th>
+                            <th>Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {cart.items.map(
+                            (item, index) => <CartItem item={item} key={index} index={index}
+                                deleteItem={deleteItem} />
+                        )}
+                    </tbody>
+                </table>
+                <p></p>
+                <AddItem />
+            </div>
         </>
     )
 }
