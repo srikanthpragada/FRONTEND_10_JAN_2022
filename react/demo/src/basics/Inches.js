@@ -1,11 +1,12 @@
 import  React, { useState }  from 'react'
 
 
-// Uncontrolled component 
+// Uncontrolled Component 
 
 export default function Inches() {
     const [inches, setInches] = useState(0)
-    const [options, setOptions] = useState({ cm : true, mm : true, feet : true})
+    const [options, setOptions] = useState({ cm: true, mm: true, feet: false })
+    const [result2, setResult2] = useState("")
 
     // get access to DOM element 
     let resultElement = React.createRef()
@@ -34,7 +35,8 @@ export default function Inches() {
             result += `${inches} inches = ${inches / 12} feet <br/>`
         
         resultElement.current.innerHTML = result;
-        console.log(resultElement)
+        //console.log(resultElement)
+        setResult2(result)  
     }
 
     return (
@@ -52,6 +54,9 @@ export default function Inches() {
             <button onClick={convert}>Convert</button>
             <p></p>
             <h4 ref={resultElement}> </h4>
+            <div>
+                {result2}
+            </div>
         </>
   )
 }
