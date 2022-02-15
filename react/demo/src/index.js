@@ -7,11 +7,13 @@ import './index.css';
 
 import Cart from './pc/Cart'
 import Inches from './basics/Inches'
+import ListBooks from './ajax/ListBooks'
+import ShowBooks from './ajax/ShowBooks'
 
 
 ReactDOM.render(
   <React.StrictMode>
-      <Inches />
+      <ShowBooks />
   </React.StrictMode>,
   
   document.getElementById('root')

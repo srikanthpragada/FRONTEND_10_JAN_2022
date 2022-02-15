@@ -1,0 +1,34 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Outliers",
+      "price": "400"
+    },
+    {
+      "id": 2,
+      "title": "Long walk to freedom",
+      "price": "550"
+    },
+    {
+      "title": "Promised Land",
+      "price": "569",
+      "id": 4
+    },
+    {
+      "title": "World is flat",
+      "price": "450",
+      "id": 5
+    },
+    {
+      "title": "Gift of Fear",
+      "price": "874",
+      "id": 6
+    },
+    {
+      "title": "You can win",
+      "price": "450",
+      "id": 7
+    }
+  ]
+}
