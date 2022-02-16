@@ -9,11 +9,15 @@ import Cart from './pc/Cart'
 import Inches from './basics/Inches'
 import ListBooks from './ajax/ListBooks'
 import ShowBooks from './ajax/ShowBooks'
+import FirstDemo from './routing/FirstDemo'
+import SecondDemo from './routing/SecondDemo'
+import Contacts from './routing/Contacts'
+import Country from './ajax/Country'
 
 
 ReactDOM.render(
   <React.StrictMode>
-      <ShowBooks />
+      <Contacts />
   </React.StrictMode>,
   
   document.getElementById('root')
