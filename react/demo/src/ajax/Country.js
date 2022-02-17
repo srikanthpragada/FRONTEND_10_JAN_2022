@@ -39,6 +39,17 @@ export default function Country() {
         })
     }
 
+    function DisplayResult() {
+
+        if (done)
+            if (found)
+                return <CountryInfo country={country} />
+            else
+                return <Error error={error} />
+        else
+            return null;  // display nothing 
+    }
+
     return (
         <>
             <h1>Country Information</h1>
@@ -46,10 +57,7 @@ export default function Country() {
             &nbsp;
             <button className="btn-primary" onClick={getCountryInfo}>Get Info</button>
             <p></p>
-            {
-                done && found ? <CountryInfo country={country} />
-                    : done ? <Error error={error} /> : ""
-            }
+            <DisplayResult />
         </>
 
     )

@@ -9,23 +9,28 @@ import {
     useParams
 } from "react-router-dom";
 
+
 export default function Contacts() {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>
+                    <Route index element={<Home />} />
+                    <Route path="home" element={<Home />} />
                     <Route path="list" element={<List />} />
                     <Route path="details/:contactName" element={<ContactDetails />} />
-                    <Route index element={<Home />} />
-                    <Route path="*" element={
-                        <h3>Sorry! Page Not Found!!!</h3>
-                    } />
+                    <Route path="*" element={<NoPage />} />
                 </Route>
             </Routes>
         </BrowserRouter>
     );
 }
 
+function NoPage() {
+    return (
+        <h3> Sorry! Page Not Found!!! </h3>
+    )
+}
 
 function Home() {
     return (
@@ -73,9 +78,9 @@ function List() {
 }
 
 function ContactDetails() {
-    let params = useParams()
-    console.log(params.contactName)
-    let contact = getContact(params.contactName)
+    let params = useParams()   // Route params 
+    let name = params.contactName 
+    let contact = getContact(name)
     return (
         <div className="row">
             <div className="col-sm-6">
@@ -97,7 +102,7 @@ function Layout() {
     return (
         <div>
             <h2>Contacts</h2>
-            [<Link to="/">Home</Link>]
+            [<Link to="/home">Home</Link>]
             [<Link to="/list">List</Link>]
             [<Link to="/about">About</Link>]
             <hr />

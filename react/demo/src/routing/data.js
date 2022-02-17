@@ -3,7 +3,7 @@ let contacts = [
         name: "Anders",
         email: "anders@microsoft.com",
         mobile: 3399432233,
-        bio : 'Author of Delphi, C# and TypeScript',
+        bio : 'Author of Turbo Pascal, Delphi, C# and TypeScript',
         image: 'anders.jpg'
     },
     {
@@ -24,12 +24,10 @@ let contacts = [
 
 
 export function getContacts() {
-
     return contacts; 
 }
 
 export function getContact(name) {
-
     return contacts.find(
         c => c.name === name
     );
